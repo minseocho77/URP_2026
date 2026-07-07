@@ -1,0 +1,23 @@
+# --- Python 가상환경 (1.9GB, 절대 커밋 금지) ---
+.venv/
+venv/
+env/
+
+# --- Python 캐시 ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- OS / 에디터 ---
+.DS_Store
+Thumbs.db
+.vscode/
+
+# --- Excel 임시 잠금파일 ---
+~$*.xlsx
+~$*.xls
+
+# --- 대용량/임시 산출물 (필요시 주석 해제하여 제외) ---
+# *.keras
+# *.h5

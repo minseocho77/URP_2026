@@ -1,0 +1,24 @@
+# === Estimate_CO2_profile.ipynb (DAE / LSTM / POD / PCA / Fusion) ===
+numpy
+pandas
+matplotlib
+scikit-learn
+plotly
+openpyxl            # pd.read_excel(*.xlsx) 백엔드
+tensorflow          # keras 포함 (2.16+ 는 keras3, 아래 tf-keras 참고)
+tf-keras            # 레포의 .h5 / SavedModel(keras2) 호환 로딩용
+
+# === semi_supervised_stacked_AE/pilot_plant_ssae.ipynb (SSAE) ===
+torch
+torchvision
+
+# === Jupyter 노트북 실행 (VSCode Jupyter 확장에서 사용) ===
+# jupyter / notebook / jupyterlab 은 내부 경로가 너무 길어 Windows 260자
+# 경로제한(long-path) 설치 실패를 유발하므로 제외했습니다.
+# VSCode에서 .ipynb 를 열고 이 커널을 선택하면 됩니다 (ipykernel 만 필요).
+ipykernel
+
+# 주의: kinetic_model/*.m, kinetic_model/kinetic_model.slx 는
+#       MATLAB + Simulink 가 필요 (파이썬 재현 불가).
+#       단, 그 출력물은 kinetic_model/*.csv 로 이미 저장되어 있어
+#       파이썬 쪽 fusion 재현에는 MATLAB 없이도 사용 가능.
