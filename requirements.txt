@@ -12,6 +12,16 @@ tf-keras            # 레포의 .h5 / SavedModel(keras2) 호환 로딩용
 torch
 torchvision
 
+# === URP week1-2: mechanistic forward / grey-box 역문제 ===
+scipy               # mechanistic_model.py: solve_ivp (등온 10상태 forward)
+torchdiffeq         # greybox_ode.py / hybrid_ude.py: 미분가능 odeint
+# 주의(중요): torch 설치가 Windows 260자 경로제한(WinError 206)으로 실패하면,
+#   관리자 PowerShell에서 아래를 1회 실행해 긴 경로 지원을 켜고 재설치:
+#   New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" `
+#     -Name LongPathsEnabled -Value 1 -PropertyType DWORD -Force
+# === URP week3-4: hybrid UDE / 결측 라벨 실험 ===
+#   nn_closure.py, hybrid_ude.py, missing_label_experiment.py (torch/torchdiffeq 공용)
+
 # === Jupyter 노트북 실행 (VSCode Jupyter 확장에서 사용) ===
 # jupyter / notebook / jupyterlab 은 내부 경로가 너무 길어 Windows 260자
 # 경로제한(long-path) 설치 실패를 유발하므로 제외했습니다.
